@@ -18,7 +18,7 @@ export default function BookingModal({ open, onClose }: BookingModalProps) {
 
   if (!open) return null;
 
-  const whatsappNumber = "33600000000";
+  const whatsappNumber = "33784703456";
 
   const handleWhatsApp = () => {
     const msg = encodeURIComponent("Bonjour, je souhaite réserver un chauffeur privé.");
@@ -135,8 +135,8 @@ export default function BookingModal({ open, onClose }: BookingModalProps) {
               </div>
               <div className="flex items-center justify-center gap-2" style={{ color: "var(--slate)", fontSize: "14px", marginTop: "16px" }}>
                 <Phone size={14} style={{ color: "var(--gold)" }} />
-                <a href="tel:+33600000000" className="transition-colors duration-300 hover:text-[var(--gold)]" style={{ fontWeight: 500 }}>
-                  +33 6 XX XX XX XX
+                <a href="tel:+33784703456" className="transition-colors duration-300 hover:text-[var(--gold)]" style={{ fontWeight: 500 }}>
+                  +33 7 84 70 34 56
                 </a>
               </div>
             </div>

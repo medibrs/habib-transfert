@@ -2,6 +2,9 @@ export interface Destination {
   id: string;
   name: string;
   price: number;
+  priceBerline: number;
+  priceVan: number;
+  priceClasseS: number;
   region: string;
   image: string;
   description: { fr: string; en: string };

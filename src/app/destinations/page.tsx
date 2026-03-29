@@ -80,8 +80,17 @@ export default function DestinationsPage() {
                       <div className="relative overflow-hidden" style={{ height: "200px" }}>
                         <Image src={dest.image} alt={dest.name} fill className="object-cover" />
                         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(11,25,41,0.7) 0%, transparent 60%)" }} />
-                        <div className="absolute top-3 right-3 px-5 py-2.5 text-white" style={{ borderRadius: "100px", background: "rgba(201,169,110,0.85)", fontSize: "14px", fontWeight: 700, letterSpacing: "0.04em", textTransform: "uppercase" }}>
-                          {t("destinations.from")} {dest.price}€
+                        <div className="absolute bottom-3 left-3 right-3 flex gap-1.5">
+                          {[
+                            { label: "Berline", val: dest.priceBerline },
+                            { label: "Van", val: dest.priceVan },
+                            { label: "Classe S", val: dest.priceClasseS },
+                          ].map((p) => (
+                            <div key={p.label} className="flex-1 text-center" style={{ padding: "6px 4px", borderRadius: "10px", background: "rgba(0,0,0,0.45)", backdropFilter: "blur(8px)" }}>
+                              <div style={{ fontSize: "10px", color: "rgba(255,255,255,0.6)", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "2px" }}>{p.label}</div>
+                              <div className="text-white font-bold" style={{ fontSize: "14px" }}>{p.val}€</div>
+                            </div>
+                          ))}
                         </div>
                       </div>
                       <div style={{ padding: "18px 20px 20px" }}>
@@ -103,6 +112,27 @@ export default function DestinationsPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Mise à disposition */}
+      <section style={{ padding: "clamp(32px, 5vw, 48px) 0", background: "var(--cream)", borderTop: "1px solid rgba(201,169,110,0.1)" }}>
+        <div className="container-main">
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "24px", justifyContent: "center", alignItems: "center", padding: "clamp(24px, 4vw, 36px)", borderRadius: "20px", background: "#ffffff", border: "1px solid rgba(201,169,110,0.1)", boxShadow: "0 2px 12px rgba(0,0,0,0.03)" }}>
+            <div style={{ textAlign: "center" }}>
+              <h3 className="font-serif font-semibold" style={{ fontSize: "clamp(18px, 2.5vw, 22px)", color: "var(--charcoal)", marginBottom: "8px" }}>
+                {lang === "fr" ? "Mise à disposition" : "Hourly hire"}
+              </h3>
+              <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+                <span style={{ fontSize: "15px", color: "var(--gold-dark)", fontWeight: 600 }}>Berline 80€/h</span>
+                <span style={{ color: "var(--slate)" }}>|</span>
+                <span style={{ fontSize: "15px", color: "var(--gold-dark)", fontWeight: 600 }}>Van 90€/h</span>
+              </div>
+              <p style={{ fontSize: "13px", color: "var(--slate)", marginTop: "8px" }}>
+                {lang === "fr" ? "Réduction de 10% au-delà de 8h" : "10% discount beyond 8 hours"}
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

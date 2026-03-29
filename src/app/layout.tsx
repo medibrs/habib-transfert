@@ -54,7 +54,7 @@ const jsonLd = {
       name: "Habib Transfert",
       description: "Service de chauffeur privé premium sur la Côte d'Azur",
       url: "https://www.habibtransfert.fr",
-      telephone: "+33600000000",
+      telephone: "+33784703456",
       email: "contact@habibtransfert.fr",
       address: {
         "@type": "PostalAddress",
