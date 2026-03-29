@@ -77,9 +77,9 @@ export default function HomePage() {
       <section className="relative flex items-center" style={{ minHeight: "100vh" }}>
         <div className="absolute inset-0">
           {/* Desktop hero */}
-          <Image src="/images/hero.jpg" alt="Côte d'Azur" fill className="object-cover hidden md:block" priority quality={90} />
+          <Image src="/images/herof.png" alt="Côte d'Azur" fill className="object-cover hidden md:block" priority quality={90} />
           {/* Mobile hero */}
-          <Image src="/images/hero mobile.webp" alt="Côte d'Azur" fill className="object-cover md:hidden" priority quality={85} />
+          <Image src="/images/heromm.png" alt="Côte d'Azur" fill className="object-cover md:hidden" priority quality={85} />
           <div
             className="absolute inset-0"
             style={{ background: "linear-gradient(160deg, rgba(10,25,41,0.92) 0%, rgba(10,25,41,0.50) 40%, rgba(10,25,41,0.70) 100%)" }}
@@ -99,16 +99,16 @@ export default function HomePage() {
             </div>
 
             <h1
-              className="font-serif text-white mb-5 sm:mb-8"
-              style={{ fontSize: "clamp(36px, 5.5vw, 76px)", lineHeight: 1.05, letterSpacing: "-0.03em", fontWeight: 500 }}
+              className="font-serif text-white"
+              style={{ fontSize: "clamp(36px, 5.5vw, 76px)", lineHeight: 1.05, letterSpacing: "-0.03em", fontWeight: 500, marginBottom: "clamp(32px, 5vw, 40px)" }}
             >
               {t("hero.title")}
             </h1>
-            <p style={{ fontSize: "clamp(15px, 1.6vw, 18px)", lineHeight: 1.75, color: "rgba(255,255,255,0.55)", maxWidth: "520px", marginBottom: "clamp(40px, 5vw, 56px)" }}>
+            <p className="hidden sm:block" style={{ fontSize: "clamp(15px, 1.6vw, 18px)", lineHeight: 1.75, color: "rgba(255, 255, 255, 0.91)", maxWidth: "520px", marginBottom: "clamp(40px, 5vw, 56px)" }}>
               {t("hero.subtitle")}
             </p>
 
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", marginBottom: "clamp(64px, 8vw, 96px)" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", marginBottom: "clamp(56px, 8vw, 96px)" }}>
               <button
                 onClick={() => setBookingOpen(true)}
                 className="btn-primary"
@@ -119,7 +119,7 @@ export default function HomePage() {
               <Link
                 href="/services"
                 className="btn-outline"
-                style={{ fontSize: "14px" }}
+                style={{ fontSize: "14px", background: "rgba(255,255,255,0.08)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}
               >
                 {t("hero.services")}
               </Link>
@@ -140,7 +140,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <div className="text-white font-bold" style={{ fontSize: "16px", lineHeight: 1.2 }}>{b.val}</div>
-                      <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.35)", letterSpacing: "0.05em", textTransform: "uppercase" }}>{b.lbl}</div>
+                      <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.6)", letterSpacing: "0.05em", textTransform: "uppercase" }}>{b.lbl}</div>
                     </div>
                   </div>
                 );

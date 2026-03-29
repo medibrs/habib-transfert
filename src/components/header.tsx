@@ -114,13 +114,15 @@ export default function Header() {
                 {lang === "fr" ? "EN" : "FR"}
               </button>
 
-              <button
-                onClick={() => setBookingOpen(true)}
-                className="hidden md:inline-flex btn-primary"
-                style={{ padding: "10px 24px", fontSize: "12px" }}
-              >
-                {t("nav.book")}
-              </button>
+              <div className="hidden lg:block">
+                <button
+                  onClick={() => setBookingOpen(true)}
+                  className="btn-primary"
+                  style={{ padding: "10px 24px", fontSize: "12px" }}
+                >
+                  {t("nav.book")}
+                </button>
+              </div>
 
               {/* Mobile Toggle */}
               <button
