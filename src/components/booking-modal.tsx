@@ -29,7 +29,7 @@ export default function BookingModal({ open, onClose }: BookingModalProps) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const subject = encodeURIComponent("Réservation Habib Transfert");
+    const subject = encodeURIComponent("Réservation HB Transfert");
     const body = encodeURIComponent(
       `Nom: ${data.get("name")}\nEmail: ${data.get("email")}\nTéléphone: ${data.get("phone")}\nService: ${data.get("service")}\nDate: ${data.get("date")}\nDépart: ${data.get("pickup")}\nDestination: ${data.get("destination")}\nPassagers: ${data.get("passengers")}\n\nMessage:\n${data.get("message")}`
     );

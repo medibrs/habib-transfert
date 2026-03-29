@@ -59,7 +59,7 @@ export const translations: Record<string, Record<string, string>> = {
   "footer.terms": { fr: "Conditions Générales", en: "Terms & Conditions" },
 
   // About Page
-  "about.hero.title": { fr: "À Propos d'Habib Transfert", en: "About Habib Transfert" },
+  "about.hero.title": { fr: "À Propos d'HB Transfert", en: "About HB Transfert" },
   "about.hero.subtitle": { fr: "L'excellence du transport privé sur la Côte d'Azur depuis notre passion pour le service.", en: "Excellence in private transportation on the French Riviera, driven by our passion for service." },
   "about.values.title": { fr: "Nos Valeurs", en: "Our Values" },
   "about.value1.title": { fr: "Expérience Premium", en: "Premium Experience" },
@@ -69,7 +69,7 @@ export const translations: Record<string, Record<string, string>> = {
   "about.value3.title": { fr: "Discrétion Absolue", en: "Absolute Discretion" },
   "about.value3.desc": { fr: "Confidentialité et professionnalisme sont au cœur de notre service. Votre vie privée est notre priorité.", en: "Confidentiality and professionalism are at the heart of our service. Your privacy is our priority." },
   "about.philosophy.title": { fr: "Notre Philosophie", en: "Our Philosophy" },
-  "about.philosophy.p1": { fr: "Chez Habib Transfert, nous croyons que le voyage est bien plus qu'un simple déplacement. C'est un moment de détente, de confort et d'élégance qui mérite une attention particulière.", en: "At Habib Transfert, we believe travel is much more than simply getting from A to B. It's a moment of relaxation, comfort and elegance that deserves special attention." },
+  "about.philosophy.p1": { fr: "Chez HB Transfert, nous croyons que le voyage est bien plus qu'un simple déplacement. C'est un moment de détente, de confort et d'élégance qui mérite une attention particulière.", en: "At HB Transfert, we believe travel is much more than simply getting from A to B. It's a moment of relaxation, comfort and elegance that deserves special attention." },
   "about.philosophy.p2": { fr: "Basés au cœur de la Côte d'Azur, nous connaissons intimement chaque route, chaque raccourci et chaque adresse de cette région exceptionnelle. Nos chauffeurs sont sélectionnés pour leur professionnalisme, leur discrétion et leur connaissance approfondie de la Riviera.", en: "Based in the heart of the French Riviera, we intimately know every road, every shortcut and every address in this exceptional region. Our chauffeurs are selected for their professionalism, discretion and deep knowledge of the Riviera." },
   "about.philosophy.p3": { fr: "Que vous arriviez à l'aéroport de Nice, que vous vous rendiez à un événement à Monaco ou que vous souhaitiez découvrir les villages perchés de l'arrière-pays, nous sommes là pour vous offrir un transport d'exception.", en: "Whether you're arriving at Nice airport, heading to an event in Monaco, or wish to discover the perched villages of the hinterland, we are here to provide exceptional transportation." },
 

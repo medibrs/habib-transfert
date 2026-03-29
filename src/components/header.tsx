@@ -55,7 +55,7 @@ export default function Header() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Habib
+                HB
               </span>
               <span
                 className="font-serif transition-all duration-500"

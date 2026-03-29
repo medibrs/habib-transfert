@@ -18,7 +18,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Chauffeur Privé Côte d'Azur | VTC Premium & Transfert Aéroport — Habib Transfert",
+  title: "Chauffeur Privé Côte d'Azur | VTC Premium & Transfert Aéroport — HB Transfert",
   description: "Service de chauffeur privé premium sur la Côte d'Azur. Transferts aéroport Nice, Monaco, Cannes, Saint-Tropez. Véhicules haut de gamme Mercedes & BMW. Réservation 24/7.",
   keywords: [
     "chauffeur privé", "VTC", "Côte d'Azur", "Nice", "Monaco", "Cannes",
@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     "French Riviera", "private driver", "airport transfer", "luxury transport"
   ],
   openGraph: {
-    title: "Habib Transfert — Chauffeur Privé Côte d'Azur",
+    title: "HB Transfert — Chauffeur Privé Côte d'Azur",
     description: "Service premium de chauffeur privé sur la Côte d'Azur. Véhicules haut de gamme, chauffeurs professionnels.",
     url: "https://www.habibtransfert.fr",
-    siteName: "Habib Transfert",
+    siteName: "HB Transfert",
     locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Habib Transfert — Chauffeur Privé Côte d'Azur",
+    title: "HB Transfert — Chauffeur Privé Côte d'Azur",
     description: "Service premium de chauffeur privé sur la Côte d'Azur.",
   },
   other: {
@@ -51,7 +51,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": ["LocalBusiness", "TransportService"],
-      name: "Habib Transfert",
+      name: "HB Transfert",
       description: "Service de chauffeur privé premium sur la Côte d'Azur",
       url: "https://www.habibtransfert.fr",
       telephone: "+33784703456",
@@ -86,7 +86,7 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      name: "Habib Transfert",
+      name: "HB Transfert",
       url: "https://www.habibtransfert.fr"
     }
   ]
