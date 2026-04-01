@@ -14,6 +14,7 @@ export default function DestinationsPage() {
   const { lang, t } = useLanguage();
   const [search, setSearch] = useState("");
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [selectedDest, setSelectedDest] = useState<typeof destinations[0] | null>(null);
 
   const filtered = useMemo(() => {
     if (!search.trim()) return destinations;
@@ -97,7 +98,7 @@ export default function DestinationsPage() {
                         <h3 className="font-serif font-bold mb-2" style={{ fontSize: "17px", color: "var(--charcoal)" }}>{dest.name}</h3>
                         <p className="text-sm line-clamp-2 mb-4" style={{ color: "var(--slate)", lineHeight: "1.7" }}>{dest.description[lang]}</p>
                         <button
-                          onClick={() => setBookingOpen(true)}
+                          onClick={() => { setSelectedDest(dest); setBookingOpen(true); }}
                           className="w-full font-semibold text-sm transition-all duration-300"
                           style={{ padding: "10px", borderRadius: "100px", background: "rgba(201,169,110,0.08)", color: "var(--gold-dark)", border: "1px solid rgba(201,169,110,0.12)", cursor: "pointer" }}
                           onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "#fff"; e.currentTarget.style.borderColor = "var(--gold)"; }}
@@ -149,7 +150,7 @@ export default function DestinationsPage() {
         </div>
       </section>
 
-      <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
+      <BookingModal open={bookingOpen} onClose={() => { setBookingOpen(false); setSelectedDest(null); }} destination={selectedDest} />
     </>
   );
 }

@@ -404,7 +404,7 @@ export default function HomePage() {
             <ScrollReveal delay={200}>
               <div className="relative">
                 <div style={{ borderRadius: "28px", overflow: "hidden", aspectRatio: "4/5", position: "relative" }}>
-                  <Image src="/images/about-hero.jpg" alt="Premium Service" fill className="object-cover" />
+                  <Image src="/images/about.png" alt="Premium Service" fill className="object-cover" />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(11, 25, 41, 0.3) 0%, transparent 50%)" }} />
                 </div>
                 {/* Floating stat card */}

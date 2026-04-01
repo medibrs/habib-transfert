@@ -8,11 +8,12 @@ import { cn } from "@/lib/utils";
 interface BookingModalProps {
   open: boolean;
   onClose: () => void;
+  destination?: { name: string; priceBerline: number; priceVan: number; priceClasseS: number } | null;
 }
 
 const inputClass = "w-full px-4 py-3.5 rounded-2xl border border-[rgba(201,169,110,0.15)] bg-[var(--sand)] focus:border-[var(--gold)] focus:ring-2 focus:ring-[rgba(201,169,110,0.12)] outline-none transition-all duration-300 text-sm text-[var(--charcoal)] placeholder:text-[var(--slate)]";
 
-export default function BookingModal({ open, onClose }: BookingModalProps) {
+export default function BookingModal({ open, onClose, destination }: BookingModalProps) {
   const { t } = useLanguage();
   const [tab, setTab] = useState<"whatsapp" | "email">("whatsapp");
 
@@ -21,7 +22,9 @@ export default function BookingModal({ open, onClose }: BookingModalProps) {
   const whatsappNumber = "33784703456";
 
   const handleWhatsApp = () => {
-    const msg = encodeURIComponent("Bonjour, je souhaite réserver un chauffeur privé.");
+    const msg = destination
+      ? encodeURIComponent(`Bonjour, je souhaite réserver un transfert vers ${destination.name}.\nTarifs : Berline ${destination.priceBerline}€ | Van ${destination.priceVan}€ | Classe S ${destination.priceClasseS}€.\nMerci de me confirmer la disponibilité.`)
+      : encodeURIComponent("Bonjour, je souhaite réserver un chauffeur privé.");
     window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, "_blank");
   };
 

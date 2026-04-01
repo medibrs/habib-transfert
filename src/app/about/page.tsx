@@ -18,9 +18,9 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-end">
+      <section className="relative h-[85vh] min-h-[500px] flex items-end">
         <div className="absolute inset-0" style={{ background: "var(--navy)" }}>
-          <Image src="/images/about-hero.jpg" alt="About" fill className="object-cover opacity-50" priority />
+          <Image src="/images/about.png" alt="About" fill className="object-cover opacity-50" priority />
           <div className="hero-overlay absolute inset-0" />
         </div>
         <div className="relative z-10 w-full container-main page-hero">

@@ -3,7 +3,7 @@ import { Vehicle } from "./types";
 export const vehicles: Vehicle[] = [
   {
     id: "classe-e", name: "Mercedes Classe E", passengers: 3, luggage: 3,
-    image: "/images/fleet/class E.png",
+    image: "/images/fleet/class E 2.png",
     description: { fr: "L'alliance parfaite du confort et de l'élégance. La Mercedes Classe E offre un habitacle raffiné avec sièges en cuir, climatisation bi-zone et un silence de roulement remarquable.", en: "The perfect blend of comfort and elegance. The Mercedes E-Class offers a refined cabin with leather seats, dual-zone climate control and remarkable ride quietness." },
     features: [
       { fr: "Sièges cuir chauffants", en: "Heated leather seats" },
@@ -14,7 +14,7 @@ export const vehicles: Vehicle[] = [
   },
   {
     id: "classe-s", name: "Mercedes Classe S", passengers: 3, luggage: 3,
-    image: "/images/fleet/class s.png",
+    image: "/images/fleet/class s 2.png",
     description: { fr: "Le summum du luxe automobile. La Mercedes Classe S est la référence absolue en matière de confort, de technologie et de prestige.", en: "The pinnacle of automotive luxury. The Mercedes S-Class is the absolute benchmark in comfort, technology and prestige." },
     features: [
       { fr: "Massage & sièges ventilés", en: "Massage & ventilated seats" },
@@ -25,7 +25,7 @@ export const vehicles: Vehicle[] = [
   },
   {
     id: "eqe", name: "Mercedes EQE", passengers: 3, luggage: 3,
-    image: "/images/fleet/eqe.webp",
+    image: "/images/fleet/eqe.png",
     description: { fr: "L'avenir du transport de luxe, 100% électrique. La Mercedes EQE combine silence absolu, performance et conscience environnementale.", en: "The future of luxury transport, 100% electric. The Mercedes EQE combines absolute silence, performance and environmental consciousness." },
     features: [
       { fr: "100% électrique", en: "100% electric" },

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import BookingModal from "@/components/booking-modal";
@@ -46,28 +47,23 @@ export default function Header() {
         <div className="container-main">
           <div className="flex items-center justify-between" style={{ height: scrolled ? "60px" : "70px", transition: "height 0.6s cubic-bezier(0.23, 1, 0.32, 1)" }}>
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-1" style={{ flexShrink: 0 }}>
-              <span
-                className="font-serif font-bold transition-all duration-500"
-                style={{
-                  fontSize: "clamp(18px, 4vw, 24px)",
-                  color: scrolled ? "var(--azur-dark)" : "#ffffff",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                HB
-              </span>
-              <span
-                className="font-serif transition-all duration-500"
-                style={{
-                  fontSize: "clamp(18px, 4vw, 24px)",
-                  fontWeight: 300,
-                  color: scrolled ? "var(--gold)" : "var(--gold-light)",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                Transfert
-              </span>
+            <Link href="/" style={{ flexShrink: 0, position: "relative", height: scrolled ? "40px" : "45px", width: scrolled ? "140px" : "160px", transition: "all 0.5s cubic-bezier(0.23, 1, 0.32, 1)" }}>
+              <Image
+                src="/images/logo white.png"
+                alt="HB Transfert"
+                fill
+                className="object-contain transition-opacity duration-500"
+                style={{ opacity: scrolled ? 0 : 1 }}
+                priority
+              />
+              <Image
+                src="/images/logo black.png"
+                alt="HB Transfert"
+                fill
+                className="object-contain transition-opacity duration-500"
+                style={{ opacity: scrolled ? 1 : 0 }}
+                priority
+              />
             </Link>
 
             {/* Desktop Nav */}
