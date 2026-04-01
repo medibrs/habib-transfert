@@ -79,7 +79,7 @@ export default function HomePage() {
           {/* Desktop hero */}
           <Image src="/images/herof.png" alt="Côte d'Azur" fill className="object-cover hidden md:block" priority quality={90} />
           {/* Mobile hero */}
-          <Image src="/images/heromm.png" alt="Côte d'Azur" fill className="object-cover md:hidden" priority quality={85} />
+          <Image src="/images/homehbm.png" alt="Côte d'Azur" fill className="object-cover md:hidden" priority quality={85} />
           <div
             className="absolute inset-0"
             style={{ background: "linear-gradient(160deg, rgba(10,25,41,0.92) 0%, rgba(10,25,41,0.50) 40%, rgba(10,25,41,0.70) 100%)" }}
