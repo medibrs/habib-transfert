@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import BookingModal from "@/components/booking-modal";
@@ -17,11 +18,19 @@ const navLinks = [
   { href: "/contact", labelKey: "nav.contact" },
 ];
 
+// Pages without a hero image that need a solid header
+const solidHeaderPages = ["/faq", "/contact"];
+
 export default function Header() {
   const { lang, toggleLang, t } = useLanguage();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [bookingOpen, setBookingOpen] = useState(false);
+
+  // Force solid header on pages without hero images
+  const noHero = solidHeaderPages.includes(pathname);
+  const solid = scrolled || noHero;
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
@@ -35,25 +44,25 @@ export default function Header() {
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-700"
         style={{
-          background: scrolled
+          background: solid
             ? "rgba(253, 252, 249, 0.92)"
             : "transparent",
-          backdropFilter: scrolled ? "blur(24px) saturate(200%)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(24px) saturate(200%)" : "none",
-          borderBottom: scrolled ? "1px solid rgba(201, 169, 110, 0.12)" : "1px solid transparent",
-          boxShadow: scrolled ? "0 4px 30px rgba(0,0,0,0.03)" : "none",
+          backdropFilter: solid ? "blur(24px) saturate(200%)" : "none",
+          WebkitBackdropFilter: solid ? "blur(24px) saturate(200%)" : "none",
+          borderBottom: solid ? "1px solid rgba(201, 169, 110, 0.12)" : "1px solid transparent",
+          boxShadow: solid ? "0 4px 30px rgba(0,0,0,0.03)" : "none",
         }}
       >
         <div className="container-main">
-          <div className="flex items-center justify-between" style={{ height: scrolled ? "60px" : "70px", transition: "height 0.6s cubic-bezier(0.23, 1, 0.32, 1)" }}>
+          <div className="flex items-center justify-between" style={{ height: solid ? "60px" : "70px", transition: "height 0.6s cubic-bezier(0.23, 1, 0.32, 1)" }}>
             {/* Logo */}
-            <Link href="/" style={{ flexShrink: 0, position: "relative", height: scrolled ? "40px" : "45px", width: scrolled ? "140px" : "160px", transition: "all 0.5s cubic-bezier(0.23, 1, 0.32, 1)" }}>
+            <Link href="/" style={{ flexShrink: 0, position: "relative", height: solid ? "40px" : "45px", width: solid ? "140px" : "160px", transition: "all 0.5s cubic-bezier(0.23, 1, 0.32, 1)" }}>
               <Image
                 src="/images/logo white.png"
                 alt="HB Transfert"
                 fill
                 className="object-contain transition-opacity duration-500"
-                style={{ opacity: scrolled ? 0 : 1 }}
+                style={{ opacity: solid ? 0 : 1 }}
                 priority
               />
               <Image
@@ -61,7 +70,7 @@ export default function Header() {
                 alt="HB Transfert"
                 fill
                 className="object-contain transition-opacity duration-500"
-                style={{ opacity: scrolled ? 1 : 0 }}
+                style={{ opacity: solid ? 1 : 0 }}
                 priority
               />
             </Link>
@@ -77,12 +86,12 @@ export default function Header() {
                     padding: "8px 16px",
                     fontSize: "13px",
                     fontWeight: 500,
-                    color: scrolled ? "var(--slate)" : "rgba(255,255,255,0.75)",
+                    color: solid ? "var(--slate)" : "rgba(255,255,255,0.75)",
                     letterSpacing: "0.04em",
                     textTransform: "uppercase",
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = scrolled ? "var(--gold-dark)" : "var(--gold-light)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = scrolled ? "var(--slate)" : "rgba(255,255,255,0.75)")}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = solid ? "var(--gold-dark)" : "var(--gold-light)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = solid ? "var(--slate)" : "rgba(255,255,255,0.75)")}
                 >
                   {t(link.labelKey)}
                 </Link>
@@ -99,9 +108,9 @@ export default function Header() {
                   fontSize: "12px",
                   fontWeight: 600,
                   letterSpacing: "0.05em",
-                  color: scrolled ? "var(--slate)" : "rgba(255,255,255,0.7)",
+                  color: solid ? "var(--slate)" : "rgba(255,255,255,0.7)",
                   borderRadius: "100px",
-                  border: scrolled ? "1px solid rgba(201, 169, 110, 0.2)" : "1px solid rgba(255,255,255,0.15)",
+                  border: solid ? "1px solid rgba(201, 169, 110, 0.2)" : "1px solid rgba(255,255,255,0.15)",
                   background: "transparent",
                   cursor: "pointer",
                 }}
@@ -126,10 +135,10 @@ export default function Header() {
                 onClick={() => setMobileOpen(!mobileOpen)}
                 style={{
                   width: "40px", height: "40px", borderRadius: "12px",
-                  background: scrolled ? "rgba(201, 169, 110, 0.06)" : "rgba(255,255,255,0.06)",
-                  border: scrolled ? "1px solid rgba(201, 169, 110, 0.15)" : "1px solid rgba(255,255,255,0.1)",
+                  background: solid ? "rgba(201, 169, 110, 0.06)" : "rgba(255,255,255,0.06)",
+                  border: solid ? "1px solid rgba(201, 169, 110, 0.15)" : "1px solid rgba(255,255,255,0.1)",
                   cursor: "pointer",
-                  color: scrolled ? "var(--charcoal)" : "#ffffff",
+                  color: solid ? "var(--charcoal)" : "#ffffff",
                 }}
               >
                 {mobileOpen ? <X size={20} /> : <Menu size={20} />}
