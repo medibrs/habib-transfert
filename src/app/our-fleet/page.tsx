@@ -23,7 +23,7 @@ export default function FleetPage() {
       {/* Hero */}
       <section className="relative h-[80vh] min-h-[500px] flex items-end">
         <div className="absolute inset-0" >
-          <Image src="/images/fleet/fleethero.png" alt="Fleet" fill className="object-cover " priority />
+          <Image src="/images/fleet/fleethero.png" alt="Airport Transfer Nice — Flotte VTC Mercedes BMW" fill className="object-cover " priority />
           <div className="hero-overlay absolute inset-0" />
         </div>
         <div className="relative z-10 w-full container-main page-hero">

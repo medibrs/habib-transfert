@@ -18,25 +18,26 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Chauffeur Privé Côte d'Azur | VTC Premium & Transfert Aéroport — HB Transfert",
-  description: "Service de chauffeur privé premium sur la Côte d'Azur. Transferts aéroport Nice, Monaco, Cannes, Saint-Tropez. Véhicules haut de gamme Mercedes & BMW. Réservation 24/7.",
+  title: "Airport Transfer Nice | VTC Chauffeur Privé Côte d'Azur — Transfert Aéroport Nice",
+  description: "Airport transfer Nice ✈ Service de chauffeur privé premium sur la Côte d'Azur. Transferts aéroport Nice, Monaco, Cannes, Saint-Tropez. Véhicules haut de gamme Mercedes & BMW. Réservation 24/7.",
   keywords: [
-    "chauffeur privé", "VTC", "Côte d'Azur", "Nice", "Monaco", "Cannes",
-    "Saint-Tropez", "transfert aéroport", "limousine", "Mercedes", "transport premium",
-    "French Riviera", "private driver", "airport transfer", "luxury transport"
+    "airport transfer nice", "chauffeur privé nice", "VTC nice", "Côte d'Azur", "Nice", "Monaco", "Cannes",
+    "Saint-Tropez", "transfert aéroport nice", "limousine nice", "Mercedes", "transport premium nice",
+    "French Riviera", "private driver nice", "airport transfer", "luxury transport",
+    "navette aéroport nice", "VTC aéroport nice", "chauffeur privé côte d'azur"
   ],
   openGraph: {
-    title: "HB Transfert — Chauffeur Privé Côte d'Azur",
-    description: "Service premium de chauffeur privé sur la Côte d'Azur. Véhicules haut de gamme, chauffeurs professionnels.",
+    title: "Airport Transfer Nice — Chauffeur Privé & VTC Côte d'Azur",
+    description: "Airport transfer Nice — Service premium de chauffeur privé sur la Côte d'Azur. Véhicules haut de gamme, chauffeurs professionnels.",
     url: "https://www.habibtransfert.fr",
-    siteName: "HB Transfert",
+    siteName: "Airport Transfer Nice — VTC Côte d'Azur",
     locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "HB Transfert — Chauffeur Privé Côte d'Azur",
-    description: "Service premium de chauffeur privé sur la Côte d'Azur.",
+    title: "Airport Transfer Nice — Chauffeur Privé & VTC Côte d'Azur",
+    description: "Airport transfer Nice — Service premium de chauffeur privé sur la Côte d'Azur.",
   },
   other: {
     "geo.region": "FR-06",
@@ -51,11 +52,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": ["LocalBusiness", "TransportService"],
-      name: "HB Transfert",
-      description: "Service de chauffeur privé premium sur la Côte d'Azur",
+      name: "Airport Transfer Nice — VTC Chauffeur Privé Côte d'Azur",
+      description: "Airport transfer Nice — Service de chauffeur privé premium sur la Côte d'Azur",
       url: "https://www.habibtransfert.fr",
       telephone: "+33784703456",
-      email: "contact@habibtransfert.fr",
+      email: "Hbdrivers06@outlook.it",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Nice",
@@ -86,7 +87,7 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      name: "HB Transfert",
+      name: "Airport Transfer Nice — VTC Côte d'Azur",
       url: "https://www.habibtransfert.fr"
     }
   ]

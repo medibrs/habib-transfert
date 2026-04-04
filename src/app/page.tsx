@@ -77,9 +77,9 @@ export default function HomePage() {
       <section className="relative flex items-center" style={{ minHeight: "100vh" }}>
         <div className="absolute inset-0">
           {/* Desktop hero */}
-          <Image src="/images/herof.png" alt="Côte d'Azur" fill className="object-cover hidden md:block" priority quality={90} />
+          <Image src="/images/herof.png" alt="Airport Transfer Nice — Chauffeur Privé VTC Côte d'Azur" fill className="object-cover hidden md:block" priority quality={90} />
           {/* Mobile hero */}
-          <Image src="/images/homehbm.png" alt="Côte d'Azur" fill className="object-cover md:hidden" priority quality={85} />
+          <Image src="/images/homehbm.png" alt="Airport Transfer Nice — VTC Chauffeur Privé" fill className="object-cover md:hidden" priority quality={85} />
           <div
             className="absolute inset-0"
             style={{ background: "linear-gradient(160deg, rgba(10,25,41,0.92) 0%, rgba(10,25,41,0.50) 40%, rgba(10,25,41,0.70) 100%)" }}
@@ -404,7 +404,7 @@ export default function HomePage() {
             <ScrollReveal delay={200}>
               <div className="relative">
                 <div style={{ borderRadius: "28px", overflow: "hidden", aspectRatio: "4/5", position: "relative" }}>
-                  <Image src="/images/about.png" alt="Premium Service" fill className="object-cover" />
+                  <Image src="/images/about.png" alt="Airport Transfer Nice — Service Premium VTC" fill className="object-cover" />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(11, 25, 41, 0.3) 0%, transparent 50%)" }} />
                 </div>
                 {/* Floating stat card */}

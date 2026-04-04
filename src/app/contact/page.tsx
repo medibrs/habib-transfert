@@ -32,7 +32,7 @@ export default function ContactPage() {
 
   const contactInfo = [
     { icon: Phone, label: t("contactPage.info.phone"), value: "+33 7 84 70 34 56", href: "tel:+33784703456" },
-    { icon: Mail, label: t("contactPage.info.email"), value: "contact@habibtransfert.fr", href: "mailto:contact@habibtransfert.fr" },
+    { icon: Mail, label: t("contactPage.info.email"), value: "Hbdrivers06@outlook.it", href: "mailto:Hbdrivers06@outlook.it" },
     { icon: MapPin, label: t("contactPage.info.location"), value: "Nice, Côte d'Azur, France" },
     { icon: Clock, label: t("contactPage.info.hours"), value: t("contactPage.info.hoursValue") },
   ];

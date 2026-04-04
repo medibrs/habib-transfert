@@ -95,7 +95,7 @@ export default function Footer() {
             <div className="space-y-4">
               {[
                 { icon: Phone, text: "+33 7 84 70 34 56" },
-                { icon: Mail, text: "contact@habibtransfert.fr" },
+                { icon: Mail, text: "Hbdrivers06@outlook.it" },
                 { icon: MapPin, text: "Nice, Côte d'Azur" },
                 { icon: Clock, text: lang === "fr" ? "Disponible 24h/24, 7j/7" : "Available 24/7" },
               ].map((item, i) => {
@@ -118,7 +118,7 @@ export default function Footer() {
       <div style={{ borderTop: "1px solid rgba(201, 169, 110, 0.08)" }}>
         <div className="container-main flex flex-col sm:flex-row items-center justify-between" style={{ padding: "clamp(16px, 3vw, 22px) 24px" }}>
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.25)", letterSpacing: "0.02em" }}>
-            © {new Date().getFullYear()} HB Transfert. {t("footer.rights")}
+            © {new Date().getFullYear()} HB Drivers 06. {t("footer.rights")}
           </p>
           <div className="flex items-center gap-6 mt-3 sm:mt-0">
             {[

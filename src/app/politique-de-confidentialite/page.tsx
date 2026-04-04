@@ -16,7 +16,7 @@ export default function PolitiqueConfidentialite() {
           <h2 className="font-serif font-semibold" style={{ fontSize: "22px", color: "var(--charcoal)" }}>Durée de conservation</h2>
           <p>Vos données sont conservées pendant une durée maximale de 3 ans à compter de votre dernière interaction avec nous.</p>
           <h2 className="font-serif font-semibold" style={{ fontSize: "22px", color: "var(--charcoal)" }}>Vos droits</h2>
-          <p>Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de rectification, de suppression et de portabilité de vos données. Contactez-nous à contact@habibtransfert.fr.</p>
+          <p>Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de rectification, de suppression et de portabilité de vos données. Contactez-nous à Hbdrivers06@outlook.it.</p>
           <h2 className="font-serif font-semibold" style={{ fontSize: "22px", color: "var(--charcoal)" }}>Cookies</h2>
           <p>Ce site utilise uniquement des cookies techniques nécessaires au bon fonctionnement du site (préférence de langue).</p>
         </div>

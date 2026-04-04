@@ -59,7 +59,7 @@ export default function Header() {
             <Link href="/" style={{ flexShrink: 0, position: "relative", height: solid ? "40px" : "45px", width: solid ? "140px" : "160px", transition: "all 0.5s cubic-bezier(0.23, 1, 0.32, 1)" }}>
               <Image
                 src="/images/logo white.png"
-                alt="HB Transfert"
+                alt="Airport Transfer Nice — VTC Chauffeur Privé Côte d'Azur"
                 fill
                 className="object-contain transition-opacity duration-500"
                 style={{ opacity: solid ? 0 : 1 }}
@@ -67,7 +67,7 @@ export default function Header() {
               />
               <Image
                 src="/images/logo black.png"
-                alt="HB Transfert"
+                alt="Airport Transfer Nice — VTC Chauffeur Privé Côte d'Azur"
                 fill
                 className="object-contain transition-opacity duration-500"
                 style={{ opacity: solid ? 1 : 0 }}

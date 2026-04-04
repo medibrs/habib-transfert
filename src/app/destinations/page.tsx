@@ -37,7 +37,7 @@ export default function DestinationsPage() {
       {/* Hero */}
       <section className="relative h-[70vh] min-h-[500px] flex items-end">
         <div className="absolute inset-0" style={{ background: "var(--navy)" }}>
-          <Image src="/images/destinations-hero.png" alt="Destinations Côte d'Azur" fill className="object-cover opacity-60" priority sizes="100vw" />
+          <Image src="/images/destinations-hero.png" alt="Airport Transfer Nice — Destinations VTC Côte d'Azur" fill className="object-cover opacity-60" priority sizes="100vw" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(11,25,41,0.85) 0%, rgba(11,25,41,0.4) 40%, rgba(11,25,41,0.15) 100%)" }} />
         </div>
         <div className="relative z-10 w-full container-main" style={{ paddingBottom: "clamp(48px, 6vw, 72px)" }}>

@@ -32,11 +32,13 @@ export default function BookingModal({ open, onClose, destination }: BookingModa
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const subject = encodeURIComponent("Réservation HB Transfert");
+    const subject = encodeURIComponent("Réservation HB Drivers 06");
     const body = encodeURIComponent(
       `Nom: ${data.get("name")}\nEmail: ${data.get("email")}\nTéléphone: ${data.get("phone")}\nService: ${data.get("service")}\nDate: ${data.get("date")}\nDépart: ${data.get("pickup")}\nDestination: ${data.get("destination")}\nPassagers: ${data.get("passengers")}\n\nMessage:\n${data.get("message")}`
     );
-    window.location.href = `mailto:contact@habibtransfert.fr?subject=${subject}&body=${body}`;
+    // Open Gmail compose — works universally in browsers
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=Hbdrivers06@outlook.it&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
   };
 
   return (
@@ -147,9 +149,9 @@ export default function BookingModal({ open, onClose, destination }: BookingModa
 
           {/* Email Tab */}
           {tab === "email" && (
-            <form onSubmit={handleEmailSubmit} style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+            <form onSubmit={handleEmailSubmit} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               <input name="name" required placeholder={t("booking.form.name")} className={inputClass} />
-              <div className="grid grid-cols-2" style={{ gap: "14px" }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "12px" }}>
                 <input name="email" type="email" required placeholder={t("booking.form.email")} className={inputClass} />
                 <input name="phone" type="tel" placeholder={t("booking.form.phone")} className={inputClass} />
               </div>
@@ -162,20 +164,17 @@ export default function BookingModal({ open, onClose, destination }: BookingModa
                 <option value="tours">Tours & Excursions</option>
                 <option value="vip">Transport VIP</option>
               </select>
-              <div className="grid grid-cols-2" style={{ gap: "14px" }}>
+              <div className="grid grid-cols-2" style={{ gap: "12px" }}>
                 <input name="date" type="date" className={inputClass} />
                 <input name="passengers" type="number" min="1" max="16" placeholder={t("booking.form.passengers")} className={inputClass} />
               </div>
-
-              <div style={{ height: "1px", background: "rgba(201, 169, 110, 0.1)", margin: "4px 0" }} />
-
               <input name="pickup" placeholder={t("booking.form.pickup")} className={inputClass} />
               <input name="destination" placeholder={t("booking.form.destination")} className={inputClass} />
               <textarea name="message" rows={3} placeholder={t("booking.form.message")} className={cn(inputClass, "resize-none")} />
               <button
                 type="submit"
                 className="btn-primary w-full justify-center"
-                style={{ marginTop: "4px", borderRadius: "16px", padding: "17px 32px" }}
+                style={{ marginTop: "6px", borderRadius: "16px", padding: "17px 32px" }}
               >
                 {t("booking.form.send")}
               </button>
