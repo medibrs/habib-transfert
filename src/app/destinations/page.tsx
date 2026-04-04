@@ -35,14 +35,14 @@ export default function DestinationsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-end">
+      <section className="relative h-[70vh] min-h-[500px] flex items-end">
         <div className="absolute inset-0" style={{ background: "var(--navy)" }}>
-          <Image src="/images/destinations-hero.jpg" alt="Destinations" fill className="object-cover opacity-50" priority />
-          <div className="hero-overlay absolute inset-0" />
+          <Image src="/images/destinations-hero.png" alt="Destinations Côte d'Azur" fill className="object-cover opacity-60" priority sizes="100vw" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(11,25,41,0.85) 0%, rgba(11,25,41,0.4) 40%, rgba(11,25,41,0.15) 100%)" }} />
         </div>
-        <div className="relative z-10 w-full container-main page-hero">
-          <h1 className="font-serif font-semibold text-white mb-4" style={{ fontSize: "clamp(32px, 5vw, 56px)", letterSpacing: "-0.02em" }}>{t("destinationsPage.hero.title")}</h1>
-          <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", color: "rgba(255,255,255,0.6)", maxWidth: "560px" }}>{t("destinationsPage.hero.subtitle")}</p>
+        <div className="relative z-10 w-full container-main" style={{ paddingBottom: "clamp(48px, 6vw, 72px)" }}>
+          <h1 className="font-serif font-semibold text-white mb-4" style={{ fontSize: "clamp(36px, 5.5vw, 64px)", letterSpacing: "-0.02em", lineHeight: "1.1" }}>{t("destinationsPage.hero.title")}</h1>
+          <p style={{ fontSize: "clamp(16px, 1.5vw, 20px)", color: "rgba(255,255,255,0.7)", maxWidth: "560px", lineHeight: "1.7" }}>{t("destinationsPage.hero.subtitle")}</p>
         </div>
       </section>
 
