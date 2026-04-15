@@ -99,6 +99,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0LH2EZVFF" />
+        {/* Google Ads */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17794306907" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -109,6 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 'analytics_storage': 'granted'
               });
               gtag('config', 'G-Y0LH2EZVFF');
+              gtag('config', 'AW-17794306907');
             `,
           }}
         />
